@@ -1,0 +1,17 @@
+body{
+    margin : 0px;
+    background-color: black;
+}
+
+p{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-bottom: 6px;
+}
+
+canvas{
+    margin-left: 20px;
+}
