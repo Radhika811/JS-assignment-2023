@@ -149,6 +149,14 @@ const keys = {
 
 let lastkey = ''
 let score = 0
+if(localStorage.getItem('highScore')==null){
+    localStorage.setItem('highScore', 0)
+}else{
+    var key = localStorage.getItem('highScore');
+    console.log(key)
+}
+
+
 
 const map = [
     ['1', '-', '-', '-', '-', '-', '-', '-', '-', '-', '2'],
@@ -247,6 +255,13 @@ function createImage(src) {
     const image = new Image()
     image.src = src
     return image; 
+}
+
+function newHighScore(score){
+    if(score > localStorage.getItem('highScore')) {
+        localStorage.setItem('highScore', score)
+    }
+    return localStorage.getItem('highScore')
 }
 
 
@@ -530,6 +545,7 @@ function animate() {
                 console.log("you lose")
                 document.getElementById('score').innerHTML = score;
                 document.getElementById('lose').style.display = "flex";
+                document.getElementById('highScoreLose').innerHTML = newHighScore(score);
             }
             else{
                 spawn(ghosts[i].color);
@@ -545,6 +561,8 @@ function animate() {
         console.log("you win");
         document.getElementById('scoreVal').innerHTML = score;
         document.getElementById('win').style.display = "flex";
+        
+        document.getElementById('highScoreWin').innerHTML = newHighScore(score);
     }
 
 
