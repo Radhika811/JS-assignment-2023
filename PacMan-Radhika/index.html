@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="heading">
+        <div class="logo"><img src="./Images/Logo.png" alt="" class="logo-img"></div>
+    </div>
+    <div class="game">
+        <div class="score">
+            <p>
+                <span>Score: </span><span id="scoreEl">0</span>
+            </p>
+            <canvas>
+        
+            </canvas>
+        </div>
+    </div>
+    <div class="win" id="win">
+        <div class="inner-win">
+            <div class="youwin">YOU WIN</div>
+            <div class="scoreAlert">
+                <div>Score : </div>
+                <div id="scoreVal"></div>
+            </div>
+            <div class="scoreAlert">
+                <div>High Score : </div>
+                <div id="highScoreWin"></div>
+            </div>
+        </div>
+    </div>
+    <div class="win" id="lose">
+        <div class="inner-win">
+            <div class="youwin">TRY AGAIN</div>
+            <div class="scoreAlert">
+                <div>Score:</div>
+                <div id="score"></div>
+            </div>
+            <div class="scoreAlert">
+                <div>High Score:</div>
+                <div id="highScoreLose"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
