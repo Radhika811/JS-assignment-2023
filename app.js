@@ -4,7 +4,7 @@ const c = canvas.getContext('2d')
 const scoreEl = document.getElementById('scoreEl');
 
 canvas.width = 440
-canvas.height = 1000
+canvas.height = 520
 
 class Boundary{
     static width = 40;
