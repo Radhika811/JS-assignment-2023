@@ -3,7 +3,7 @@ const c = canvas.getContext('2d')
 
 const scoreEl = document.getElementById('scoreEl');
 
-canvas.width = 500
+canvas.width = 440
 canvas.height = 1000
 
 class Boundary{
@@ -528,6 +528,8 @@ function animate() {
             if(!ghosts[i].scared){
                 cancelAnimationFrame(annimationID)
                 console.log("you lose")
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('lose').style.display = "flex";
             }
             else{
                 spawn(ghosts[i].color);
@@ -541,6 +543,8 @@ function animate() {
     if(pellets.length === 0){
         cancelAnimationFrame(annimationID)
         console.log("you win");
+        document.getElementById('scoreVal').innerHTML = score;
+        document.getElementById('win').style.display = "flex";
     }
 
 
